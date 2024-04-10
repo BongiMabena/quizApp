@@ -1,0 +1,116 @@
+body {
+  background-image: url("https://erudera.com/media/images/computer_science.2e16d0ba.fill-16000x9000.jpg");
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+
+.timer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #0367a6;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+select {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0367a6;
+  color: #fff;
+  cursor: pointer;
+}
+
+#quiz {
+  margin-top: 20px;
+}
+
+#question {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#options button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+}
+
+#options button.correct {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#options button.incorrect {
+  background-color: #f44336;
+  color: #fff;
+}
+
+#score {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+#score.failed {
+  color: #f44336;
+}
+
+#score.passed {
+  color: #4caf50;
+}
+
+#retry {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+}

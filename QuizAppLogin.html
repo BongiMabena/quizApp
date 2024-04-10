@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        background-image: url("https://images.app.goo.gl/KktMbfzJ8ZNwu5weA");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        perspective: 1000px;
+      }
+
+      .container {
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+
+      .container.stopped {
+        animation: none; /* Remove the rotation animation */
+      }
+
+      h2 {
+        color: #250f0f;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333333;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #cccccc;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        padding: 12px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var container = document.querySelector(".container");
+        var inputs = document.querySelectorAll("input");
+
+        inputs.forEach(function (input) {
+          input.addEventListener("focus", function () {
+            container.classList.add("stopped");
+          });
+
+          input.addEventListener("blur", function () {
+            container.classList.remove("stopped");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="Quiz App.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

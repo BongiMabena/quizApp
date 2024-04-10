@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url("https://img.freepik.com/premium-photo/creative-education-sketch-chalkboard-wall-backdrop-freehand-drawing-school-items-back-school-concept_670147-10031.jpg?w=2000");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Added to center the submit button */
+        animation: rotate 10s infinite linear;
+      }
+
+      .stop-rotation {
+        animation: none;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
+      h2 {
+        color: #333333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333333;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #cccccc;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      /* Media Queries for Responsive Layout */
+
+      /* Tablets and larger screens */
+      @media (min-width: 768px) {
+        body {
+          background-size: auto;
+        }
+
+        .container {
+          max-width: 600px;
+        }
+      }
+    </style>
+    <script>
+      function stopRotation() {
+        var container = document.querySelector(".container");
+        container.classList.add("stop-rotation");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Signup</h2>
+      <form action="QuizAppLogin.html" method="POST">
+        <!--  <form action="QuizAppLogin.html" method="post">  -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <input type="submit" value="Sign Up" onclick="stopRotation()" />
+      </form>
+    </div>
+  </body>
+</html>
